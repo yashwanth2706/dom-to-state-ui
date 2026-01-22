@@ -6,10 +6,10 @@ button.addEventListener("click", (event) => {
     event.preventDefault();
 
     const myItem = input.value.trim();
-    if (!myItem) {
+    /* if (!myItem) {
         alert("Add something to the list!");
         return;
-    }
+    } */
 
     input.value = "";
 
@@ -27,10 +27,6 @@ button.addEventListener("click", (event) => {
     listItem.append(listText, deleteBtn, editBtn);
 
     list.appendChild(listItem);
-
-    deleteBtn.addEventListener("click", () => {
-        list.removeChild(listItem);
-    });
 
     // DELETE
     deleteBtn.addEventListener("click", ()=> {
